@@ -265,6 +265,8 @@ class Utils
 		file.write("unCertain.each_pair do |key, value|\n")
 		file.write("	puts \"\#\{key\}\"\n")
 
+		#there are 6 cases with are too ambiguous - human intervention is necessary
+
 		file.write("		if((value.length==2) & (value & [\"ee85c89f24946e2ddca12c6edc5181dc\", \"eb6af018e11320f5c163624beb83767d\"]).present?)\n")
 		file.write("			puts \"! ee85c89f24946e2ddca12c6edc5181dc \"\n")
 

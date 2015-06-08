@@ -1,0 +1,35 @@
+development:
+  sessions:
+    default:
+      database: patid
+      hosts:
+        - localhost:27017
+  options:
+    raise_not_found_error: false
+
+test:
+  sessions:
+      database: patid
+      hosts:
+        - localhost:27017
+  options:
+    raise_not_found_error: false
+
+production:
+  sessions:
+    default:
+      database: cypress_production
+      hosts:
+        - localhost:27017
+  options:
+    raise_not_found_error: true
+
+measure_eval:
+  sessions:
+    default:
+      database: patid
+      hosts:
+        - localhost:27017
+  options:
+    raise_not_found_error: false
+
