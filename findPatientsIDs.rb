@@ -6,7 +6,7 @@ require 'zip/zipfilesystem'
 require 'fileutils'
 require 'health-data-standards'
 
-#a simple patinet from QRDA class - consider for 
+#a simple patient from QRDA class - consider for 
 # TODO either make it reach or remove it
 class PatientFromQRDA
 	attr_accessor :fileName
