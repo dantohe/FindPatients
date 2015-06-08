@@ -6,18 +6,21 @@ require 'zip/zipfilesystem'
 require 'fileutils'
 require 'health-data-standards'
 
+#a simple patinet from QRDA class - consider for 
+# TODO either make it reach or remove it
 class PatientFromQRDA
 	attr_accessor :fileName
 	def initialize(fileName)
 		@fileName=fileName
 	end
-
 end
 
 
 
 
+#this was intended as the main processor 
 class CypressPatientFinder
+	
 	attr_accessor :testQRDAFile, :masterQRDAFile, :file
 
 	#constructor
@@ -27,6 +30,7 @@ class CypressPatientFinder
 		@file=file
 	end
 
+
 	# loads the patients (records) from the archived QRDA file 
 	def processPatients
 		testPatients=Utils::collectQRDAPatientsFromZip(testQRDAFile)
@@ -34,6 +38,9 @@ class CypressPatientFinder
 		iterateThroughRecordsAndWriteQueries( testPatients)
 	end
 
+
+	#goes through each test record/patient and creates a Mongoid query
+	# FIXME find the proper way to inject strings into Mongoid queries
 	def iterateThroughRecordsAndWriteQueries( testPatients)
 		puts "Creating a query for each test patinet - each query will identify mongo records that satisfy the section components criteria
 Using
@@ -44,17 +51,15 @@ Using
 		procedures
 		insurance_providers \n\n"
 		for patient in testPatients
-
 			firstName=patient.fileName.split("_")[1]
 			lastName=patient.fileName.split("_")[2].split(".")[0]
-
 			createQueryForPatient(firstName,lastName,file, patient.fileName)
 		end
 	end
 
 		
 
-
+	#creates query per patient
 	def createQueryForPatient(firstName,lastName,file,theFileName)
 
 		#look for this record in mongo using first name and last name 
@@ -81,6 +86,8 @@ Using
 	end	
 end
 
+
+# a collection of utilities grouped together under the same roof
 class Utils
 
 	#a utility that loads into mongoDB records from a zip containing QRDA files 
@@ -105,6 +112,7 @@ class Utils
 	end
 
 	#formulates Mongoid queries using codes from diffrent sections of the patient record
+	# FIXME this is a mess - the section codes collection should be using one sinle method - to much code repetion here
 	def self.getCodesQueryForPatient(patient)
 				# Record::Sections.each do |section|
 		# 	puts "section #{section}"
@@ -233,7 +241,7 @@ class Utils
 		finalResult
 	end
 
-
+	#creates a script to be populated and run at the end 
 	def self.initiateTemporaryScript
 		file = File.open("autoScript.rb", "w")
 		file.write("def callAll\n") 
