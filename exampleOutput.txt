@@ -1,96 +1,45 @@
-dantohe@ThinkPadTablet:~/development/repositories/matchP/2nd/repo/FindPatients$ ruby findPatientsIDs.rb test/T63-21.zip 
-Collecting and storing reords from: test/T63-21.zip
-Loaded 39 testPatients
+dantohe@ThinkPadTablet:~/development/repositories/matchP/2nd/repo/FindPatients$ ruby findPatientsIDs.rb test/T63-22.zip 
 
-Creating a query for each test patinet - each query will identify mongo records that satisfy the section components criteria
-Using
-		allergies
-		conditions
-		encounters
-		medications
-		procedures
-		insurance_providers 
-
-PRINTING RESULTS
-TOTAL PROCESSED ::::: 39
-CERTAIN ::::: 31
-UNCERTAIN ::::: 8
-0_Hazel_Abbott.xml
-61aa020431420dce8f53b74352a990fe
-1_Ruth_Baker.xml
-343731b99c6bdb35a1fc31ce9ed6f889
-2_Darryl_Barnes.xml
-7a86cc6d87cb84461ea190e7c706d81b
-4_Julie_Boone.xml
-5407e0ea5126420644b503c66153eb3c
-6_Philip_Casey.xml
-185be4f0c1ea87f63e4326e45db87bdf
-7_Leroy_Cohen.xml
-a6300c43651965991a4308ffaeb5381d
-9_Nathan_Cross.xml
-20a80b26a1bfa70740e243ea5ac1fea6
-10_Josephine_Dean.xml
-d045df54952043573bb6a94c374c8420
-12_Delores_Fletcher.xml
-29cecb1da08efd331fce823e12b607d5
-13_Lydia_Ford.xml
-fdea0c22270417d9e59f20b07f642679
-14_Jeanette_Fowler.xml
-d156a6d38e10efc30eda3cace7456537
-15_Gary_Fox.xml
-cce1bd3b83676d7a9b286b374b4c34f8
-16_Sara_Garner.xml
-88130abfa702d8f53ac7be76e9d24a58
-17_Jeanette_Greer.xml
-846c1c2ba8370c2f5504b315cc4b1d5d
-18_Susan_Hanson.xml
-511b530c8662f8df97eb97b3eefa0618
-21_Tara_Joseph.xml
-1be81ce59da982792026cc82d95bc10e
-22_Marc_Lawson.xml
-7a86cc6d87cb84461ea190e7c706d81b
-23_Keith_Logan.xml
-bd2d8e0fd774e32f623e1fe5ad44781f
-24_Sergio_Lucas.xml
-0085074bb549ffefffa6e16ff34df140
-25_Joshua_Massey.xml
-91bd37f9cebf7b6ef9f72d7fd6148a81
-27_April_Mccormick.xml
-0dbaf9336f7aa1590265250a0eebe548
-28_Wayne_Morris.xml
-2678a4e396aaec03b860d5aeadcad8e6
-29_Jay_Reese.xml
-e05ff19bd33566173fd742d4b9831f1f
-30_Billy_Roberson.xml
-ce83c561f62e245ad4e0ca648e9de0dd
-31_Matthew_Salazar.xml
-8130b2ff5774f1593c86eba8dca4c37b
-32_Corey_Shelton.xml
-b5633133e3421216ced2bdef4dbf382d
-33_Georgia_Snyder.xml
-b54a4e3ab37de7e5f8094793afb8a699
-35_Bruce_Stokes.xml
-697e147f076648275e518e7b3ff41dcd
-36_Virgil_Sullivan.xml
-bc8f60f4cbde3d6c28974971b6880792
-37_Eugene_Turner.xml
-470f57b022eaeffd4d599078e851a56d
-38_Julia_Waters.xml
-5407e0ea5126420644b503c66153eb3c
-3_Ana_Barton.xml
-! 929dd1f2c4c54c024fd4d18b1307fdb1 
-5_Ross_Brock.xml
-! 5f118631f09abdbdeb1962dc28bfeb27 
-8_Evelyn_Conner.xml
-! 0a26a978d07240b0f917e96727db31d8 
-11_Sonia_Ellis.xml
-! ee85c89f24946e2ddca12c6edc5181dc 
-19_Lucy_Harmon.xml
-! ee85c89f24946e2ddca12c6edc5181dc 
-20_Seth_Harper.xml
-! 258ee9087c5a5fe359ceb3aafff0dd76 
-26_Shawn_Maxwell.xml
-! 5f118631f09abdbdeb1962dc28bfeb27 
-34_Marie_Stewart.xml
-! fed089904c10b81c036adddedddebe7b 
-dantohe@ThinkPadTablet:~/development/repositories/matchP/2nd/repo/FindPatients$ 
+Loaded 40 test patients
+Loaded 56 master patients
+Processing....
+0_Elmer_Austin.xml			b5633133e3421216ced2bdef4dbf382d
+1_Bessie_Bowman.xml			61aa020431420dce8f53b74352a990fe
+2_Nathan_Carson.xml			2678a4e396aaec03b860d5aeadcad8e6
+3_Craig_Chandler.xml			697e147f076648275e518e7b3ff41dcd
+4_Larry_Clark.xml			0085074bb549ffefffa6e16ff34df140
+5_Gregory_Cohen.xml			ce83c561f62e245ad4e0ca648e9de0dd
+6_Erin_Cortez.xml			fdea0c22270417d9e59f20b07f642679
+7_Audrey_Curry.xml			846c1c2ba8370c2f5504b315cc4b1d5d
+8_Vanessa_Elliott.xml			29cecb1da08efd331fce823e12b607d5
+9_Nathan_French.xml			8130b2ff5774f1593c86eba8dca4c37b
+10_Becky_Fuller.xml			ee85c89f24946e2ddca12c6edc5181dc
+11_Seth_Gibson.xml			20a80b26a1bfa70740e243ea5ac1fea6
+12_Lloyd_Graham.xml			a6300c43651965991a4308ffaeb5381d
+13_Keith_Harrington.xml			e05ff19bd33566173fd742d4b9831f1f
+14_Jordan_Hawkins.xml			cce1bd3b83676d7a9b286b374b4c34f8
+15_Bob_Hayes.xml			470f57b022eaeffd4d599078e851a56d
+16_Dolores_Jensen.xml			5407e0ea5126420644b503c66153eb3c
+17_Marsha_Marsh.xml			b54a4e3ab37de7e5f8094793afb8a699
+18_Annette_Mcguire.xml			d045df54952043573bb6a94c374c8420
+19_Elaine_Mclaughlin.xml			929dd1f2c4c54c024fd4d18b1307fdb1
+20_Marjorie_Miles.xml			1be81ce59da982792026cc82d95bc10e
+21_Jon_Miller.xml			470f57b022eaeffd4d599078e851a56d
+22_Derek_Moody.xml			7a86cc6d87cb84461ea190e7c706d81b
+23_Tracy_Moreno.xml			88130abfa702d8f53ac7be76e9d24a58
+24_Lillian_Norton.xml			511b530c8662f8df97eb97b3eefa0618
+25_Hector_Norton.xml			bd2d8e0fd774e32f623e1fe5ad44781f
+26_Salvador_Oliver.xml			91bd37f9cebf7b6ef9f72d7fd6148a81
+27_Fred_Peters.xml			258ee9087c5a5fe359ceb3aafff0dd76
+28_Ida_Pierce.xml			0a26a978d07240b0f917e96727db31d8
+29_Bob_Robinson.xml			185be4f0c1ea87f63e4326e45db87bdf
+30_Martin_Salazar.xml			8130b2ff5774f1593c86eba8dca4c37b
+31_Sam_Sanchez.xml			bc8f60f4cbde3d6c28974971b6880792
+32_Randy_Simmons.xml			5f118631f09abdbdeb1962dc28bfeb27
+33_Geraldine_Simpson.xml			ee85c89f24946e2ddca12c6edc5181dc
+34_Veronica_Stokes.xml			d156a6d38e10efc30eda3cace7456537
+35_Grace_Wade.xml			fed089904c10b81c036adddedddebe7b
+36_Karen_Wade.xml			343731b99c6bdb35a1fc31ce9ed6f889
+37_Derrick_Wagner.xml			7a86cc6d87cb84461ea190e7c706d81b
+38_Felicia_Webb.xml			0dbaf9336f7aa1590265250a0eebe548
+39_Brad_Wheeler.xml			bc8f60f4cbde3d6c28974971b6880792
