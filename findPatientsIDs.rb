@@ -37,8 +37,8 @@ class MRNfinder
 		masterRecords=Utils::getMasterRecordsFromCypress
 
 		puts "\nLoaded #{testPatients.length} test patients"
-		puts "Loaded #{masterRecords.length} master patients"
-		puts "Processing...."
+		puts "Loaded #{masterRecords.length} master patients\n"
+		print "Processing...."
 		iterateThroughRecordsAndWriteQueries(masterRecords, testPatients)
 	end
 
@@ -50,12 +50,14 @@ class MRNfinder
 
 		for testRecord in testPatients
 			#iterate through master records and find candidates 
+			print "."
 			candidates= Utils::iterateThroughMasterRecordsAndFindCandidates(masterRecords, testRecord.patient)
 			#resolve cadidates to unique MRNs
 			Utils::getUniqueMedicalRecordNumber(candidates,testRecord,testToMasterHash)
 		end
 
 		#print results
+		puts ""
 		testToMasterHash.each_pair do |key, value|
 			puts "#{key}\t\t\t#{value}"
 		end
